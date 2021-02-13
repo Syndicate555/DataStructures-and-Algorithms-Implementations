@@ -13,6 +13,12 @@ class Node:
             else:
                 self.leftChild = Node(data)
                 return True
+        else:
+            if self.rightChild:
+                return self.rightChild.insert(data)
+            else:
+                self.rightChild = Node(data)
+                return True
 
 
 class BST:
