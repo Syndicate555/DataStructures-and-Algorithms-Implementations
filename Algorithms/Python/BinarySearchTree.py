@@ -20,7 +20,7 @@ class Node:
                 self.rightChild = Node(data)  # if no node exists, create one
                 return True
 
-    def find(self, data):
+    def find(self, data):  # recursive function to insert an element into the tree
      if (self.value == data):
       return True
      elif self.value > data:
@@ -51,3 +51,20 @@ class BST:
        return self.root.find(data)
       else:
        return False
+    def preorder(self):
+     print("This is the Preorder Traversal of the BST")
+     self.root.preorder()
+
+    def inorder(self):
+     print("This is the Inorder Traversal of the BST")
+     self.root.inorder()
+
+    def postorder(self):
+     print("This is the Postorder Traversal of the BST")
+     self.root.postorder()
+
+     
+     
+     
+
+
