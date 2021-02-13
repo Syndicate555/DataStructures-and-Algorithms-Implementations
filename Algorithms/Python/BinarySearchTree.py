@@ -32,3 +32,8 @@ class BST:
             # if the tree is empty, start by creating a node
             self.root = Node(data)
             return True
+     def find(self, data):
+      if self.root:
+       return self.root.find(data)
+      else:
+       return False
