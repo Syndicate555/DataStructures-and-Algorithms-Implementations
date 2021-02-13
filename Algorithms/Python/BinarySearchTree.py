@@ -26,5 +26,9 @@ class BST:
         self.root = None
 
     def insert(self, data):
-        if self.root:
-            return self.root.inset(data)
+        if self.root:  # if the tree has elements, look through it to figure out the right spot of the element to be inserted
+            return self.root.insert(data)
+        else:
+            # if the tree is empty, start by creating a node
+            self.root = Node(data)
+            return True
