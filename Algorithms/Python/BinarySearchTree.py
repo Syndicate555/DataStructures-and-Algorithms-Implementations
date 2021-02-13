@@ -34,6 +34,22 @@ class Node:
       else:
        return False
 
+    def preorder(self):
+     if self:
+      print(str(self.value))
+      if self.leftChild:
+       self.leftChild.preorder()
+      if self.rightChild:
+       self.rightChild.preorder()
+
+    def postorder(self):
+     if self:
+      if self.leftChild:
+       self.leftChild.postorder()
+      if self.rightChild:
+       self.rightChild.postorder()
+      print(str(self.value))
+
 
 class BST:
     def __init__(self):
