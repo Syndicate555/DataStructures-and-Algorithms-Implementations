@@ -101,6 +101,8 @@ class BST:
         print("Printing the tree")
         self.root.printTree()
 
+# Test Operations
+
 
 myTree = BST()
 myTree.insert(27)
@@ -111,4 +113,6 @@ myTree.insert(19)
 myTree.insert(31)
 myTree.insert(42)
 # myTree.inorder()
-myTree.printTree()
+# myTree.printTree()
+myTree.postorder()
+myTree.preorder()
