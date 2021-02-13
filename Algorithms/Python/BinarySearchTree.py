@@ -20,6 +20,20 @@ class Node:
                 self.rightChild = Node(data)  # if no node exists, create one
                 return True
 
+    def find(self, data):
+     if (self.value == data):
+      return True
+     elif self.value > data:
+      if self.leftChild:
+       return self.leftChild.find(data)
+      else:
+       return False
+     else:
+      if self.rightChild:
+       return self.rightChild.find(data)
+      else:
+       return False
+
 
 class BST:
     def __init__(self):
