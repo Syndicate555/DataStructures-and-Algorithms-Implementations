@@ -44,9 +44,11 @@ class LinkedList(object):
         counter = 0
         while current_node:
             if current_node.get_data() == d:
+                print(counter)
                 return counter, d
             else:
                 current_node = current_node.get_next()
+                counter += 1
         return None #Data not found
 
 
@@ -57,4 +59,5 @@ for i in range(10):
     testList.add(i)
     i+=1
 testList.remove(8)
+testList.find(4)
 print("size="+str(testList.get_size()))
