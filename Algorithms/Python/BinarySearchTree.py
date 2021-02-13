@@ -1,5 +1,5 @@
 class Node:
- def __init__(self, val):
-  self.value = value
-  self.leftChild = None
-  self.rightChild = None
+    def __init__(self, val):
+        self.value = val
+        self.leftChild = None
+        self.rightChild = None
