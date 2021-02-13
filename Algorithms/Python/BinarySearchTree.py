@@ -50,6 +50,14 @@ class Node:
        self.rightChild.postorder()
       print(str(self.value))
 
+    def inorder(self):
+      if self:
+       if self.leftChild:
+        self.leftChild.inorder()
+       print(str(self.value))
+       if self.rightChild:
+        self.rightChild.inorder()
+
 
 class BST:
     def __init__(self):
