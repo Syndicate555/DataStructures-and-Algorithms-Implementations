@@ -8,3 +8,17 @@ def twoNumberSum(array, targetSum):
                 arr.append(array[i])
                 arr.append(array[j])
     return arr
+
+
+def twoNumberSum2(array, targetSum):
+    # O(n) time complexity
+    nums = {}  # using a HashTable
+    arr = []
+    for num in array:
+        potentialMatch = targetSum - num
+        if potentialMatch in nums:
+            arr.append(potentialMatch)
+            arr.append(num)
+        else:
+            nums[num] = True
+    return arr
