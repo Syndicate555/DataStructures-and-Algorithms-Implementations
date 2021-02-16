@@ -25,20 +25,13 @@ def twoNumberSum2(array, targetSum):
 
 
 def isValidSubsequence(array, sequence):
-    # Write your code here.
-    counter = 0
-    for i in range(0, len(sequence)):
-        for match in array:
-            if sequence[i] == match:
-                counter += 1
-                array.remove(match)
-    if counter == len(sequence):
-        print(counter)
-        return True
-    else:
-        print(counter)
-        return False
-
+ arrIndex = 0
+ seqIndex = 0
+ while arrIndex < len(array) and seqIndex < len(sequence):
+  if array[arrIndex] == sequence[seqIndex]:
+		 seqIndex += 1
+		arrIndex += 1
+	return seqIndex == len(sequence)
 
 # isValidSubsequence([1, 1, 1, 1, 1], [1, 1, 1])
 
