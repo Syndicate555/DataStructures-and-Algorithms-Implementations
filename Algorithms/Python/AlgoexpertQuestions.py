@@ -22,3 +22,17 @@ def twoNumberSum2(array, targetSum):
         else:
             nums[num] = True
     return arr
+
+
+def isValidSubsequence(array, sequence):
+    # Write your code here.
+    counter = 0
+    for i in range(0, len(sequence)):
+        for match in array:
+            if sequence[i] == match:
+                counter += 1
+                array.remove(match)
+    if counter == len(sequence):
+        return True
+    else:
+        return False
