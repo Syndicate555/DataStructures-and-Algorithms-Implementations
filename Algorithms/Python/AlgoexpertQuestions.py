@@ -33,6 +33,17 @@ def isValidSubsequence(array, sequence):
                 counter += 1
                 array.remove(match)
     if counter == len(sequence):
+        print(counter)
         return True
     else:
+        print(counter)
         return False
+
+
+# isValidSubsequence([1, 1, 1, 1, 1], [1, 1, 1])
+
+a = [1, 2, 3, 4, 5]
+dup = a
+print(dup)
+a.remove(3)
+print(dup)
