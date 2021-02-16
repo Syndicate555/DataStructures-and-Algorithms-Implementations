@@ -1,5 +1,6 @@
 def twoNumberSum(array, targetSum):
     # Write your code here.
+    # O(n2) time complexity
 	arr = []
 	for i in range(0, len(array)):
 		for j in range(i+1, len(array)):
