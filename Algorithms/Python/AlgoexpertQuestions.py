@@ -25,18 +25,10 @@ def twoNumberSum2(array, targetSum):
 
 
 def isValidSubsequence(array, sequence):
- arrIndex = 0
- seqIndex = 0
- while arrIndex < len(array) and seqIndex < len(sequence):
-  if array[arrIndex] == sequence[seqIndex]:
-		 seqIndex += 1
-		arrIndex += 1
-	return seqIndex == len(sequence)
-
-# isValidSubsequence([1, 1, 1, 1, 1], [1, 1, 1])
-
-a = [1, 2, 3, 4, 5]
-dup = a
-print(dup)
-a.remove(3)
-print(dup)
+    arrIndex = 0
+    seqIndex = 0
+    while arrIndex < len(array) and seqIndex < len(sequence):
+        if array[arrIndex] == sequence[seqIndex]:
+            seqIndex += 1
+        arrIndex += 1
+        return seqIndex == len(sequence)
