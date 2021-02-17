@@ -58,9 +58,14 @@ class LinkedList(object):
                 counter += 1
         return None  # Data not found
 
+    def reverseList(self):
+        prev = None
+
+        while (self.value != None):
+            next = self.next
+
 
 # Test operations
-
 testList = LinkedList()
 for i in range(10):
     testList.add(i)
