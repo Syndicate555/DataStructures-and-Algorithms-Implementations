@@ -105,7 +105,7 @@ class BST:
 
 
 myTree = BST()
-myTree.insert(27)
+myTree.insert(25)
 myTree.insert(14)
 myTree.insert(35)
 myTree.insert(10)
