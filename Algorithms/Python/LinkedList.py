@@ -61,15 +61,19 @@ class LinkedList(object):
     def reverseList(self):
         prev = None
 
-        while (self.value != None):
-            next = self.next
+        while (self.root.data != None):
+            next = self.root.next_node
+            self.root.next_node = prev
+            prev = self.root.data
+            self.root.data = next
 
 
 # Test operations
 testList = LinkedList()
-for i in range(10):
+for i in range(11):
     testList.add(i)
     i += 1
 testList.remove(6)
 testList.find(4)
+testList.reverseList()
 print("size="+str(testList.get_size()))
