@@ -85,6 +85,6 @@ def calculateSums(node, runningSum, arr):
 
 #################################################################################################################
 #  PROBLEM: NODEDEPTHS
-#  TheDistancebetweenanode in aBinaryTree and thetree's root is called the node'sdepth.
+#  The Distance between a node in a Binary Tree and the Tree's root is called the node's depth
 #  Write a function that takes in a Binary Tree and returns the sum of its nodes depths
 # Each binaryTree node has an integer value, a left child node and a right child node. children nodes can either be BinaryTree nodes themselves or None/null
