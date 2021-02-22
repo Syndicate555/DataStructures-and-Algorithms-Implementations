@@ -15,4 +15,4 @@ def fact(n):
     return counter
 
 
-print(fact(4))
+print(fact(0))
