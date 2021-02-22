@@ -70,7 +70,7 @@ class LinkedList(object):
 
 # Test operations
 testList = LinkedList()
-for i in range(11):
+for i in range(10):
     testList.add(i)
     i += 1
 testList.remove(6)
