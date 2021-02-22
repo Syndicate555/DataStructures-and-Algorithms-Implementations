@@ -1,6 +1,6 @@
 def factorial(n):
     # recursive implementation
-    counter = 0
+    counter = 1
     if (n <= 0):
         return counter
     factorial(n - 1)
