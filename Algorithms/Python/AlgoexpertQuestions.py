@@ -45,14 +45,17 @@ def tournamentWinner(competitions, results):
         elif results[i] == 1:
             arr.append(competitions[i][home])
     return max(set(arr), key=arr.count)
-
+######################################################################################################################################
 # PROBLEM:BRANCH SUMS
 # Writeafunctionthattakes in aBinaryTree and returnsalistofitsbranchsumsordered from leftmostbranchsumtorightmostbranchsum.
 # ABranchsum is thesumofallvalues in BinaryTreebranch.Abinarytreebranch is apathofnodes in atreethatstartsattherootnode and endsatanyleafnode.
 # Each binaryTree node has an integer value, a left child node and a right child node. children nodes can either be BinaryTree nodes themselves or None/null
 
+# SOLUTION:
 
 # This is the class of the input root. Do not edit it.
+
+
 class BinaryTree:
     def __init__(self, value):
         self.value = value
@@ -79,3 +82,5 @@ def calculateSums(node, runningSum, arr):
 
     calculateSums(node.left, newRunningSum, arr)
     calculateSums(node.right, newRunningSum, arr)
+
+#################################################################################################################
