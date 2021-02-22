@@ -66,6 +66,14 @@ class Node:
             if self.rightChild:
                 self.rightChild.printTree()
 
+    def invert(self):
+        left = self.leftChild
+        right = self.rightChild
+        self.rightChild = left
+        self.leftChild = right
+        invert(self.leftChild)
+        invert(self.rightChild)
+
 
 class BST:
     def __init__(self):
@@ -101,6 +109,9 @@ class BST:
         print("Printing the tree")
         self.root.printTree()
 
+    def invertTree(self):
+        self.root.invert()
+
 # Test Operations
 
 
@@ -113,6 +124,8 @@ myTree.insert(19)
 myTree.insert(31)
 myTree.insert(42)
 # myTree.inorder()
-# myTree.printTree()
-myTree.postorder()
-myTree.preorder()
+myTree.printTree()
+myTree.invertTree()
+myTree.printTree()
+# myTree.postorder()
+# myTree.preorder()
