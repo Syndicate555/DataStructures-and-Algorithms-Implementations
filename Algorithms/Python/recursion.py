@@ -1,3 +1,5 @@
+# Here are two different implementations of the same function using different approaches
+
 def factorial(n):
     # recursive implementation
     if (n >= 1):
