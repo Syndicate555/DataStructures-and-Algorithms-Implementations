@@ -1,9 +1,9 @@
 def factorial(n):
     # recursive implementation
-    counter = 1
-    if (n <= 0):
-        return counter
-    factorial(n - 1)
+    if (n >= 1):
+        return n * factorial(n - 1)
+    else:
+        return 1
 
 
 def fact(n):
@@ -16,3 +16,4 @@ def fact(n):
 
 
 print(fact(0))
+print(factorial(4))
