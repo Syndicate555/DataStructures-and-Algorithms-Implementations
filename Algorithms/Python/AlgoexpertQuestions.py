@@ -46,6 +46,36 @@ def tournamentWinner(competitions, results):
             arr.append(competitions[i][home])
     return max(set(arr), key=arr.count)
 
+# PROBLEM:BRANCH SUMS
+# Writeafunctionthattakes in aBinaryTree and returnsalistofitsbranchsumsordered from leftmostbranchsumtorightmostbranchsum.
+# ABranchsum is thesumofallvalues in BinaryTreebranch.Abinarytreebranch is apathofnodes in atreethatstartsattherootnode and endsatanyleafnode.
+# Each binaryTree node has an integer value, a left child node and a right child node. children nodes can either be BinaryTree nodes themselves or None/null
 
-tournamentWinner([["HTML", "C#"], ["C#", "Python"],
-                  ["Python", "HTML"]], [0, 0, 1])
+
+# This is the class of the input root. Do not edit it.
+class BinaryTree:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+
+def branchSums(root):
+    arr = []
+    # Write your code here.
+    calculateSums(root, 0, arr)
+    return arr
+
+# Helper function to append all the calculated sums to a list
+
+
+def calculateSums(node, runningSum, arr):
+    if node is None:
+        return
+    newRunningSum = runningSum + node.value
+    if node.left is None and node.right is None:
+        arr.append(newRunningSum)
+        return
+
+    calculateSums(node.left, newRunningSum, arr)
+    calculateSums(node.right, newRunningSum, arr)
