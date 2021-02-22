@@ -48,7 +48,7 @@ def tournamentWinner(competitions, results):
 ######################################################################################################################################
 # PROBLEM:BRANCH SUMS
 # Writeafunctionthattakes in aBinaryTree and returnsalistofitsbranchsumsordered from leftmostbranchsumtorightmostbranchsum.
-# ABranchsum is thesumofallvalues in BinaryTreebranch.Abinarytreebranch is apathofnodes in atreethatstartsattherootnode and endsatanyleafnode.
+# A Branchsum is the sum of allvalues in BinaryTreebranch.Abinarytreebranch is apathofnodes in atreethatstartsattherootnode and endsatanyleafnode.
 # Each binaryTree node has an integer value, a left child node and a right child node. children nodes can either be BinaryTree nodes themselves or None/null
 
 # SOLUTION:
@@ -84,3 +84,7 @@ def calculateSums(node, runningSum, arr):
     calculateSums(node.right, newRunningSum, arr)
 
 #################################################################################################################
+#  PROBLEM: NODEDEPTHS
+#  TheDistancebetweenanode in aBinaryTree and thetree's root is called the node'sdepth.
+#  Write a function that takes in a Binary Tree and returns the sum of its nodes depths
+# Each binaryTree node has an integer value, a left child node and a right child node. children nodes can either be BinaryTree nodes themselves or None/null
