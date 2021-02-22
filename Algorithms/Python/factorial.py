@@ -15,5 +15,6 @@ def fact(n):
     return counter
 
 
+# Test cases
 print(fact(0))
 print(factorial(4))
