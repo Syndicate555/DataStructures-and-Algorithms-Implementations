@@ -1,34 +1,7 @@
 from collections import Counter
 
 
-class Words:
-    def __init__(self):
-        self.data = []
-
-    def record(self, string):
-        self.data.append(string)
-
-    def TopWord(self):
-        a = dict(Counter(self.data))
-        return(max(a, key=a.get))
-
-    def LeastWord(self):
-        a = dict(Counter(self.data))
-        return(min(a, key=a.get))
-
-
-d = Words()
-d.record('Saffat')
-d.record('Saffat')
-d.record('Saffat')
-d.record('Aziz')
-d.record('Aziz')
-d.record('Raiyan')
-print(d.TopWord())
-print(d.LeastWord())
-
-
-# Importing Counter from collections library
+# Question: Write a class that has 3 methods. The class will be able to store words as strings and be able to return the most and least repeated word.
 
 
 class WordsMcWordsFaceSuperWordCounter:
