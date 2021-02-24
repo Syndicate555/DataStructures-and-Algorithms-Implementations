@@ -103,3 +103,26 @@ class BinaryTree:
         self.value = value
         self.left = None
         self.right = None
+
+ ####################################################################
+ # Remove Duplicates from a LinkedList
+ ################################################################
+ # This is an input class. Do not edit.
+
+
+class LinkedList:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+
+def removeDuplicatesFromLinkedList(linkedList):
+    # Write your code here.
+	temp = linkedList
+	while temp is not None:
+		nextNode = temp.next
+		while nextNode is not None and nextNode.value == temp.value:
+			nextNode = nextNode.next
+		temp.next = nextNode
+		temp = nextNode
+    return LinkedList
