@@ -148,3 +148,23 @@ def reverseLinkedList(head):
 		prev = current
 		current = next
 	return prev
+
+################################################################
+# Binary Search Implementation
+################################################################
+
+def binarySearch(array, target):
+    # Write your code here.
+	return binaryHelper(array, target, 0, len(array)-1)
+
+def binaryHelper(array,target,left,right):
+	while left <= right:
+		middle = (left + right) // 2
+		match = array[middle]
+		if target == match:
+			return middle
+		elif target < match:
+			right = middle -1
+		else: 
+			left = middle +1
+	return -1

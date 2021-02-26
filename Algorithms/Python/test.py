@@ -1,13 +1,9 @@
-def minimumWaitingTime(queries):
+def getNthFib(n):
     # Write your code here.
-    time = 0
-    arr = []
-    queries.sort()
-    for i in range(1, len(queries)):
-        time += queries[i - 1]
-        arr.append(time)
-
-    return sum(arr)
+    arr = [0, 1]
+    for i in range(n-1):
+        arr.append(arr[i] + arr[i+1])
+    return arr[n-1]
 
 
-print(minimumWaitingTime([3, 2, 1, 2, 6]))
+print(getNthFib(2))
