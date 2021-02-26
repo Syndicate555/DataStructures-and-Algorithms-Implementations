@@ -126,3 +126,25 @@ def removeDuplicatesFromLinkedList(linkedList):
 		temp.next = nextNode
 		temp = nextNode
     return LinkedList
+
+###############################################
+# Reverse a LinkedList
+##########################################
+class LinkedList:
+	def __init__(self,value):
+		self.value = value
+		self.next = None
+def reverseLinkedList(head):
+    # Write your code here.
+	prev = None
+	current = head
+	while (current is not None):
+		# save the next node
+		next = current.next
+		# change the direction of the next node to the previous node
+		current.next = prev
+		
+		# change the position of the previous and current nodes
+		prev = current
+		current = next
+	return prev
