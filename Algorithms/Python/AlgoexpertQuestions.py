@@ -168,3 +168,20 @@ def binaryHelper(array,target,left,right):
 		else: 
 			left = middle +1
 	return -1
+
+###########################################################
+# Find 3 largest numbers in an array without sorting the array.
+# put those numbers in an sorted array
+#################################################
+def findThreeLargestNumbers(array):
+    # Write your code here.
+	a = []
+	b = []
+	for i in range(3):
+		a.append(max(array))
+		array.remove(max(array))
+	# creating a new sorted array without using any built in sort algorithm
+	for i in range(1,4):
+		b.append(a[-i])
+		i = i -1
+	return b
