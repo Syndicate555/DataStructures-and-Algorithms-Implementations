@@ -1,9 +1,10 @@
-def getNthFib(n):
+def isPalindrome(string):
     # Write your code here.
-    arr = [0, 1]
-    for i in range(n-1):
-        arr.append(arr[i] + arr[i+1])
-    return arr[n-1]
+    s = ''
+    for i in range(len(string)-1, 0, -1):
+        s = s + string[i]
+    s = s + string[0]
+    print(s)
 
 
-print(getNthFib(2))
+isPalindrome('abcdcba')
