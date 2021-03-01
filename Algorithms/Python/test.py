@@ -1,10 +1,14 @@
-def isPalindrome(string):
-    # Write your code here.
-    s = ''
-    for i in range(len(string)-1, -1, -1):
-        s = s + string[i]
+def invert(string):
+    arr = {}
+    for i in range(len(string)):
+        arr[string[i]] = ord(string[i])
 
-    return s == string
+    sort = sorted(arr.items(), key=lambda x: x[1])
+    a = []
+    for i in sort:
+        a.append(i[0])
+
+    return "".join(a)
 
 
-print(isPalindrome('abcdcba'))
+print(invert('edcab'))
