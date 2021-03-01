@@ -7,4 +7,4 @@ def isPalindrome(string):
     return s == string
 
 
-print(isPalindrome('abcdcbab'))
+print(isPalindrome('abcdcba'))
