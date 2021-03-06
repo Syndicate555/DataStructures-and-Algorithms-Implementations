@@ -19,5 +19,5 @@ def fact(n):
 
 
 # Test cases
-print(fact(0))
+print(fact(1))
 print(factorial(4))
